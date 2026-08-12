@@ -1,22 +1,22 @@
-# SuperLog
+# NeoLog
 
 **Real-time structured log viewer and system monitor for developers.**
 
-`superlog` is a terminal UI (TUI) that tails any JSON log file and gives you live dashboards, trace drill-down, level filtering, system metrics, and one-key log export — all in your terminal.
+`neolog` is a terminal UI (TUI) that tails any JSON log file and gives you live dashboards, trace drill-down, level filtering, system metrics, and one-key log export — all in your terminal.
 
 ---
 
 ## Install
 
 ```bash
-pip install superlog
+pip install neolog
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/superlog
-cd superlog
+git clone https://github.com/GauravPandit27/TUI-logs
+cd TUI-logs
 pip install -e .
 ```
 
@@ -27,14 +27,14 @@ pip install -e .
 ### View a log file
 
 ```bash
-superlog app.log
-superlog /var/log/myapp.log --max-lines 5000
+neolog app.log
+neolog /var/log/myapp.log --max-lines 5000
 ```
 
 ### Use the structured logger in your app
 
 ```python
-from superlog import get_logger, trace, set_trace_id
+from neolog import get_logger, trace, set_trace_id
 
 logger = get_logger("myapp", log_file="app.log", level="DEBUG")
 
@@ -50,7 +50,7 @@ def process_order(order_id: str):
 Each request gets its own trace ID automatically:
 
 ```python
-from superlog import set_trace_id
+from neolog import set_trace_id
 
 def handle_request():
     trace_id = set_trace_id()  # auto UUID4
@@ -111,7 +111,7 @@ Opened with `m` from the dashboard. Updates every second.
 
 ## Log Format
 
-SuperLog works with any newline-delimited JSON log. The `get_logger()` utility produces compatible output, but you can point it at any structured log file:
+NeoLog works with any newline-delimited JSON log. The `get_logger()` utility produces compatible output, but you can point it at any structured log file:
 
 ```json
 {"level": "INFO", "timestamp": "2026-08-12T12:00:00+00:00", "message": "User logged in", "user_id": 42}
@@ -127,7 +127,7 @@ Non-JSON lines are shown as plain dimmed text — no crashes.
 Wraps any function to automatically log entry, exit, execution time, and exceptions:
 
 ```python
-from superlog import trace
+from neolog import trace
 
 @trace(log_args=True, log_result=False)
 def fetch_user(user_id: int) -> dict:
