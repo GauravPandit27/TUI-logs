@@ -15,6 +15,6 @@ Example:
 """
 from .logger import get_logger, trace, set_trace_id, get_trace_id
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__  = "Gaurav Pandit"
 __all__     = ["get_logger", "trace", "set_trace_id", "get_trace_id"]
