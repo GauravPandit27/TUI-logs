@@ -3,13 +3,13 @@ requires      = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name            = "superlog"
+name            = "superlog-tui"
 version         = "0.1.0"
 description     = "Real-time structured log viewer and system monitor TUI for developers"
 readme          = "README.md"
 requires-python = ">=3.10"
 license         = { text = "MIT" }
-authors         = [{ name = "Your Name", email = "you@example.com" }]
+authors         = [{ name = "Gaurav Pandit", email = "gauravpandit27@gmail.com" }]
 keywords        = ["logging", "tui", "terminal", "monitor", "devtools", "tracing", "json"]
 classifiers     = [
     "Development Status :: 3 - Alpha",
@@ -39,9 +39,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage      = "https://github.com/yourusername/superlog"
-Repository    = "https://github.com/yourusername/superlog"
-"Bug Tracker" = "https://github.com/yourusername/superlog/issues"
+Homepage      = "https://github.com/GauravPandit27/TUI-logs"
+Repository    = "https://github.com/GauravPandit27/TUI-logs"
+"Bug Tracker" = "https://github.com/GauravPandit27/TUI-logs/issues"
 
 # ── CLI entry point ─────────────────────────────────────────────────────────
 [project.scripts]
